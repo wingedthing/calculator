@@ -56,7 +56,7 @@ main {
   align-items: center;
 }
 
-.calulator-wrapper {
+.calculator-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 16.7% 83.3% ;
@@ -72,7 +72,7 @@ main {
 }
 
 @media only screen and (max-width: 660px){
-  .calulator-wrapper {
+  .calculator-wrapper {
     margin: 0 20% 0 20%;
   }
 }
