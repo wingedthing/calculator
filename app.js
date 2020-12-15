@@ -316,7 +316,7 @@ const percentBehaviour = () => {
 
 const backspaceBehaviour = () => {
   let nums = display.getCurrentDisplay();
-  if (nums === "0" || nums === "-0" || nums === '') {
+  if (nums === "0" || nums === "-0" || nums === '' || nums.length == 1) {
     display.resetDisplay();
     isNegative = false;
     hasDecimal = false;
