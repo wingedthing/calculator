@@ -37,8 +37,16 @@ const display = new (function () {
     return _currentFontSize;
   }
 
+  this.getCurrentDisplay = () => {
+    return _currentDisplay;
+  }
+
   this.setFontSize = (input) => {
     _currentFontSize = input;
+  }
+
+  this.setCurrentDisplayValue = (input) => {
+    _currentDisplay = input;
   }
 
   this.setDisplaySize = (input) => {
@@ -79,14 +87,6 @@ const display = new (function () {
     _currentDisplay = arr.join('');
   }
 
-  this.getCurrentDisplay = () => {
-    return _currentDisplay;
-  }
-
-  this.setCurrentDisplayValue = (input) => {
-    _currentDisplay = input;
-  }
-
   this.resetDisplay = () => {
     _currentDisplay = '';
     this.element.textContent = '0';
@@ -95,7 +95,7 @@ const display = new (function () {
 })();
 
 const checkDisplaySize = () => {
-  while(display.getWidth() > display.getParentWidth()) {
+  while (display.getWidth() > display.getParentWidth()) {
     display.setDisplaySize(display.getFontSize() - .1);
   }
 }
@@ -149,7 +149,23 @@ function operate([num1, operand, num2]) {
       result = divide(a, b);
     }
   }
-  return Number(Math.round(result + 'e12') + 'e-12');
+  console.log(result);
+  return roundResult(result);
+}
+
+//returns num of decimal places in a fractional num
+const decimalPlaces = (n) => {
+  let s = "" + (+n);
+  let match = /(?:\.(\d+))?(?:[eE]([+\-]?\d+))?$/.exec(s);
+  return Math.max(0, (match[1] == '0' ? 0 : (match[1] || '').length) - (match[2]  || 0));
+}
+
+const roundResult = (num) => {
+  if(Number.isInteger(num)){
+    return num;
+  }else {
+    return Number(Math.round(num + 'e4') + 'e-4');
+  } 
 }
 
 const divideByZero = () => {
@@ -183,6 +199,7 @@ const numberBehavior = (event) => {
     display.resetDisplay();
     display.content(event.target.textContent);
     hasOldData = false;
+    hasDecimal = false;
   } else if (!hasOldData) {
     display.content(event.target.textContent);
     checkDisplaySize();
@@ -246,7 +263,7 @@ const operatorBehavior = (event) => {
 }
 
 const equalsBehavior = () => {
-  if (inputArray[0] !== '' && inputArray[1] !== '' && !hasOldData)  {
+  if (inputArray[0] !== '' && inputArray[1] !== '' && !hasOldData) {
     inputArray[2] = display.getCurrentDisplay();
     let result = operate(inputArray);
     if (result === undefined) {
