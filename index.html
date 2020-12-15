@@ -18,7 +18,7 @@
     <main>
       <div class="calulator-wrapper">
         <div class="display-container">
-          <div id="display" class="display">9+1000</div>
+          <div id="display" class="display"><span id="dis-span" class="dis-span">0</span></div>
           <div class="backspace-container">
           <button id="backspace" class="backspace">&#8656;</button>
         </div>
@@ -27,19 +27,19 @@
           <button id="clear" class="clear" style="grid-area: clear;">AC</button>
           <button id="negative" class="negative" style="grid-area: negative;">+/-</button>
           <button id="percent" class="percent" style="grid-area: percent;">%</button>
-          <button id="divide" class="divide" style="grid-area: divide;">&#247;</button>
-          <button id="seven" class="seven" style="grid-area: seven;">7</button>
-          <button id="eight" class="eight" style="grid-area: eight;">8</button>
-          <button id="nine" class="nine" style="grid-area: nine;">9</button>
-          <button id="multiply" class="multiply" style="grid-area: multiply;">&#215;</button>
-          <button id="four" class="four" style="grid-area: four;">4</button>
-          <button id="five" class="five" style="grid-area: five;">5</button>
-          <button id="six" class="six" style="grid-area: six;">6</button>
-          <button id="minus" class="minus" style="grid-area: minus;">-</button>
-          <button id="one" class="one" style="grid-area: one;">1</button>
-          <button id="two" class="two" style="grid-area: two;">2</button>
-          <button id="three" class="three" style="grid-area: three;">3</button>
-          <button id="plus" class="plus" style="grid-area: plus;">+</button>
+          <button id="divide" class="divide operator" style="grid-area: divide;">&#247;</button>
+          <button id="seven" class="number seven" style="grid-area: seven;">7</button>
+          <button id="eight" class="number eight" style="grid-area: eight;">8</button>
+          <button id="nine" class="number nine" style="grid-area: nine;">9</button>
+          <button id="multiply" class="multiply operator" style="grid-area: multiply;">&#215;</button>
+          <button id="four" class="number four" style="grid-area: four;">4</button>
+          <button id="five" class="number five" style="grid-area: five;">5</button>
+          <button id="six" class="number six" style="grid-area: six;">6</button>
+          <button id="minus" class="minus operator" style="grid-area: minus;">-</button>
+          <button id="one" class="number one" style="grid-area: one;">1</button>
+          <button id="two" class="number two" style="grid-area: two;">2</button>
+          <button id="three" class="number three" style="grid-area: three;">3</button>
+          <button id="plus" class="plus operator" style="grid-area: plus;">+</button>
           <button id="zero" class="zero" style="grid-area: zero;">0</button>
           <button id="decimal" class="decimal" style="grid-area: decimal;">.</button>
           <button id="equals" class="equals" style="grid-area: equals;">=</button>
@@ -53,6 +53,7 @@
       
     </footer>
   </div>
+  <script src="./app.js" type="text/javascript"></script>
 </body>
 
 </html>
