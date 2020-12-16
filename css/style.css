@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'digital-7regular';
-  src: url(..calculator/digital-7-webfont.woff2) format('woff2'),
-       url(..calculator/digital-7-webfont.woff) format('woff');
+  src: url("..calculator/digital-7-webfont.woff2") format('woff2'),
+       url("..calculator/digital-7-webfont.woff") format('woff');
   font-weight: normal;
   font-style: normal;
 }
