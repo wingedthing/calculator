@@ -306,7 +306,7 @@ const percentBehaviour = () => {
   if (num === '') {
     return
   } else {
-    let result = operate(['.01', '×', num]);
+    let result = operate(['.01', '*', num]);
     display.setCurrentDisplayValue('');
     display.content(result);
     hasOldData = true;

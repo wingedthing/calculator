@@ -53,7 +53,7 @@ header {
 }
 
 h1 {
-  
+  font-family: 'digital-7regular';
   color: antiquewhite;
   font-size: 3em;
   text-align: center;
@@ -90,10 +90,6 @@ main {
   button:hover {
     transform: scale(1);
     background-color: unset;
-  }
-
-  .backspace:hover {
-    transform: scale(0);
   }
 }
 
@@ -143,9 +139,6 @@ main {
   background: url(/calculator/backspace.svg);
   background-size: 100% 100%;
   border: none;
-}
-
-.backspace:hover {
 }
 
 .button-container {
@@ -207,9 +200,6 @@ button:focus {
 .equals:hover {
   background-color:rgb(100, 206, 100);
 }
-
-
-
 
 footer {
   height: 10vh;
