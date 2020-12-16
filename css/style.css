@@ -140,7 +140,7 @@ main {
   background-color:rgb(141, 139, 139, 0.45) ;
   color: white;
   font-size: 3em;
-  background: url(/backspace.svg);
+  background: url(/calculator/backspace.svg);
   background-size: 100% 100%;
   border: none;
 }
