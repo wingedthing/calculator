@@ -245,7 +245,7 @@ const operatorBehavior = (event) => {
     hasOldData = true;
     hasDecimal = false;
     isNegative = false;
-  } else if (wasOperatorEntered) {
+  } else if (wasOperatorEntered && !hasOldData) {
     inputArray[2] = display.getCurrentDisplay();
     let tempResult = operate(inputArray);
     display.resetDisplay();
@@ -257,6 +257,8 @@ const operatorBehavior = (event) => {
     hasDecimal = false;
     isNegative = false;
     checkDisplaySize();
+  }else if (wasOperatorEntered && hasOldData){
+    inputArray[1] = event.target.dataset.value;
   }
 
 }
@@ -292,6 +294,9 @@ const clearBehavior = () => {
 }
 
 const negativeBehaviour = () => {
+  if(hasOldData){
+    return;
+  }
   if (!isNegative) {
     isNegative = true;
     display.makeNegative();
