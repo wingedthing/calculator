@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'digital-7regular';
+  src: url(/fonts/digital-7-webfont.woff2) format('woff2'),
+       url(/fonts/digital-7-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -87,11 +96,21 @@ main {
 }
 
 .display {
+  display: flex;
   color: white;
   text-align: right;
+  justify-content: right;
   height: 1.5em;
   box-sizing: border-box;
   width: 98%;
+  font-family: 'digital-7regular' , monospace;
+}
+
+.dis-span {
+  align-self: center;
+  text-align: right;
+  justify-self: right;
+  flex: 2;
 }
 
 .backspace-container {

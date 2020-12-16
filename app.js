@@ -23,7 +23,7 @@ const buttons = {
 const display = new (function () {
   let _currentDisplay = '';
   this.element = document.getElementById('dis-span');
-  let _currentFontSize = 1.6;
+  let _currentFontSize = 2.5;
 
   this.getWidth = () => {
     return this.element.offsetWidth;
@@ -90,7 +90,7 @@ const display = new (function () {
   this.resetDisplay = () => {
     _currentDisplay = '';
     this.element.textContent = '0';
-    this.setDisplaySize(1.6);
+    this.setDisplaySize(2.5);
   }
 })();
 
@@ -169,10 +169,10 @@ const roundResult = (num) => {
 
 const divideByZero = () => {
   clearBehavior();
-  display.setDisplaySize(1);
+  display.setDisplaySize(1.3);
   display.content('Division by zero is undefined');
   display.setCurrentDisplayValue('');
-  display.setFontSize(1.6);
+  display.setFontSize(2.5);
 }
 
 function addEvents() {
@@ -327,4 +327,4 @@ const backspaceBehaviour = () => {
 }
 
 addEvents();
-display.setDisplaySize(1.6);
+display.setDisplaySize(2.5);
