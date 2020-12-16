@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie-edge">
   <link href="./css/reset.css" rel="stylesheet" type="text/css">
   <link href="./css/style.css" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <title>Calculator</title>
 </head>
 
@@ -20,13 +22,13 @@
         <div class="display-container">
           <div id="display" class="display"><span id="dis-span" class="dis-span">0</span></div>
           <div class="backspace-container">
-            <button id="backspace" class="backspace">&#8656;</button>
+            <button id="backspace" class="backspace"></button>
           </div>
         </div>
         <div class="button-container">
-          <button id="clear" class="clear" style="grid-area: clear;">AC</button>
-          <button id="negative" class="negative" style="grid-area: negative;">+/-</button>
-          <button id="percent" class="percent" style="grid-area: percent;">%</button>
+          <button id="clear" class="clear top" style="grid-area: clear;">AC</button>
+          <button id="negative" class="negative top" style="grid-area: negative;">+/-</button>
+          <button id="percent" class="percent top" style="grid-area: percent;">%</button>
           <button id="divide" class="divide operator" data-value="/" style="grid-area: divide;">&#247;</button>
           <button id="seven" class="number seven" data-value="7" style="grid-area: seven;">7</button>
           <button id="eight" class="number eight" data-value="8" style="grid-area: eight;">8</button>
@@ -40,7 +42,7 @@
           <button id="two" class="number two" data-value="2" style="grid-area: two;">2</button>
           <button id="three" class="number three" data-value="3" style="grid-area: three;">3</button>
           <button id="plus" class="plus operator" data-value="+" style="grid-area: plus;">+</button>
-          <button id="zero" class="zero" data-value="0" style="grid-area: zero;">0</button>
+          <button id="zero" class="zero number" data-value="0" style="grid-area: zero;">0</button>
           <button id="decimal" class="decimal" data-value="." style="grid-area: decimal;">.</button>
           <button id="equals" class="equals" style="grid-area: equals;">=</button>
         </div>

@@ -313,7 +313,11 @@ const percentBehaviour = () => {
   }
 }
 
-const backspaceBehaviour = () => {
+const backspaceBehaviour = (e) => {
+  e.target.style.transform = "scale(0)";
+  setTimeout(()=>{
+    e.target.style.transform = "scale(1)";
+  },100);
   let nums = display.getCurrentDisplay();
   if (nums === "0" || nums === "-0" || nums === '' || nums.length == 1) {
     display.resetDisplay();

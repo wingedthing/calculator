@@ -1,7 +1,9 @@
 @font-face {
   font-family: 'digital-7regular';
   src: url("/calculator/digital-7-webfont.woff2") format('woff2'),
-       url("/calculator/digital-7-webfont.woff") format('woff');
+       url("/calculator/digital-7-webfont.woff") format('woff'),
+       url("/digital-7-webfont.woff2") format('woff2'),
+       url("/digital-7-webfont.woff") format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -84,6 +86,15 @@ main {
   .calculator-wrapper {
     margin: 0 20% 0 20%;
   }
+
+  button:hover {
+    transform: scale(1);
+    background-color: unset;
+  }
+
+  .backspace:hover {
+    transform: scale(0);
+  }
 }
 
 .display-container {
@@ -114,15 +125,27 @@ main {
 }
 
 .backspace-container {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   box-sizing: border-box;
-  justify-content: right;
+  justify-self: center;
+  display: flex;
+  flex-wrap: nowrap;
 
 }
 
 .backspace {
   width: 100%;
+  height: 100%;
+  background-color:rgb(141, 139, 139, 0.45) ;
+  color: white;
+  font-size: 3em;
+  background: url(/backspace.svg);
+  background-size: 100% 100%;
+  border: none;
+}
+
+.backspace:hover {
 }
 
 .button-container {
@@ -148,7 +171,45 @@ button {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.6em;
+  font-weight: 400;
+  color: rgb(25, 68, 107, 0.85);
+  background-color: skyblue;
 }
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.operator:hover {
+  background-color: gold;
+  transform: scale(1.01);
+}
+
+.operator:focus {
+  background-color: gold;
+}
+
+.number:hover {
+  background-color: tomato;
+}
+
+.top:hover {
+  background-color: tomato;
+}
+
+.decimal:hover {
+  background-color: tomato;
+}
+
+.equals:hover {
+  background-color:rgb(100, 206, 100);
+}
+
+
+
 
 footer {
   height: 10vh;
