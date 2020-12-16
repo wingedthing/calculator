@@ -20,37 +20,39 @@
         <div class="display-container">
           <div id="display" class="display"><span id="dis-span" class="dis-span">0</span></div>
           <div class="backspace-container">
-          <button id="backspace" class="backspace">&#8656;</button>
-        </div>
+            <button id="backspace" class="backspace">&#8656;</button>
+          </div>
         </div>
         <div class="button-container">
           <button id="clear" class="clear" style="grid-area: clear;">AC</button>
           <button id="negative" class="negative" style="grid-area: negative;">+/-</button>
           <button id="percent" class="percent" style="grid-area: percent;">%</button>
-          <button id="divide" class="divide operator" style="grid-area: divide;">&#247;</button>
-          <button id="seven" class="number seven" style="grid-area: seven;">7</button>
-          <button id="eight" class="number eight" style="grid-area: eight;">8</button>
-          <button id="nine" class="number nine" style="grid-area: nine;">9</button>
-          <button id="multiply" class="multiply operator" style="grid-area: multiply;">&#215;</button>
-          <button id="four" class="number four" style="grid-area: four;">4</button>
-          <button id="five" class="number five" style="grid-area: five;">5</button>
-          <button id="six" class="number six" style="grid-area: six;">6</button>
-          <button id="minus" class="minus operator" style="grid-area: minus;">-</button>
-          <button id="one" class="number one" style="grid-area: one;">1</button>
-          <button id="two" class="number two" style="grid-area: two;">2</button>
-          <button id="three" class="number three" style="grid-area: three;">3</button>
-          <button id="plus" class="plus operator" style="grid-area: plus;">+</button>
-          <button id="zero" class="zero" style="grid-area: zero;">0</button>
-          <button id="decimal" class="decimal" style="grid-area: decimal;">.</button>
+          <button id="divide" class="divide operator" data-value="/" style="grid-area: divide;">&#247;</button>
+          <button id="seven" class="number seven" data-value="7" style="grid-area: seven;">7</button>
+          <button id="eight" class="number eight" data-value="8" style="grid-area: eight;">8</button>
+          <button id="nine" class="number nine" data-value="9" style="grid-area: nine;">9</button>
+          <button id="multiply" class="multiply operator" data-value="*" style="grid-area: multiply;">&#215;</button>
+          <button id="four" class="number four" data-value="4" style="grid-area: four;">4</button>
+          <button id="five" class="number five" data-value="5" style="grid-area: five;">5</button>
+          <button id="six" class="number six" data-value="6" style="grid-area: six;">6</button>
+          <button id="minus" class="minus operator" data-value="-" style="grid-area: minus;">-</button>
+          <button id="one" class="number one" data-value="1" style="grid-area: one;">1</button>
+          <button id="two" class="number two" data-value="2" style="grid-area: two;">2</button>
+          <button id="three" class="number three" data-value="3" style="grid-area: three;">3</button>
+          <button id="plus" class="plus operator" data-value="+" style="grid-area: plus;">+</button>
+          <button id="zero" class="zero" data-value="0" style="grid-area: zero;">0</button>
+          <button id="decimal" class="decimal" data-value="." style="grid-area: decimal;">.</button>
           <button id="equals" class="equals" style="grid-area: equals;">=</button>
         </div>
       </div>
     </main>
     <footer>
       <p>JavaScript Web Dev 101</p>
-      <a class="odin-link" href="https://www.theodinproject.com/courses/foundations/lessons/calculator" target="_blank">The Odin Project</a>
-      <a class="github-link" href="https://github.com/wingedthing/calculator" target="_blank" ><img src="https://github.githubassets.com/favicons/favicon.png" alt="github logo"></a>
-      
+      <a class="odin-link" href="https://www.theodinproject.com/courses/foundations/lessons/calculator"
+        target="_blank">The Odin Project</a>
+      <a class="github-link" href="https://github.com/wingedthing/calculator" target="_blank"><img
+          src="https://github.githubassets.com/favicons/favicon.png" alt="github logo"></a>
+
     </footer>
   </div>
   <script src="./app.js" type="text/javascript"></script>

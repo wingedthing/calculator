@@ -137,11 +137,11 @@ function operate([num1, operand, num2]) {
   let result = 0;
   if (operand == '+') {
     result = add(a, b);
-  } else if (operand == '×') {
+  } else if (operand == '*') {
     result = multiply(a, b);
   } else if (operand == '-') {
     result = minus(a, b);
-  } else if (operand == '÷') {
+  } else if (operand == '/') {
     if (b === 0) {
       divideByZero();
       return undefined;
@@ -149,7 +149,6 @@ function operate([num1, operand, num2]) {
       result = divide(a, b);
     }
   }
-  console.log(result);
   return roundResult(result);
 }
 
@@ -157,15 +156,15 @@ function operate([num1, operand, num2]) {
 const decimalPlaces = (n) => {
   let s = "" + (+n);
   let match = /(?:\.(\d+))?(?:[eE]([+\-]?\d+))?$/.exec(s);
-  return Math.max(0, (match[1] == '0' ? 0 : (match[1] || '').length) - (match[2]  || 0));
+  return Math.max(0, (match[1] == '0' ? 0 : (match[1] || '').length) - (match[2] || 0));
 }
 
 const roundResult = (num) => {
-  if(Number.isInteger(num)){
+  if (Number.isInteger(num)) {
     return num;
-  }else {
+  } else {
     return Number(Math.round(num + 'e4') + 'e-4');
-  } 
+  }
 }
 
 const divideByZero = () => {
@@ -197,11 +196,11 @@ const numberBehavior = (event) => {
   let value = display.getCurrentDisplay();
   if (hasOldData || value == '0' || value == "-0") {
     display.resetDisplay();
-    display.content(event.target.textContent);
+    display.content(event.target.dataset.value);
     hasOldData = false;
     hasDecimal = false;
   } else if (!hasOldData) {
-    display.content(event.target.textContent);
+    display.content(event.target.dataset.value);
     checkDisplaySize();
   }
 }
@@ -216,7 +215,7 @@ const zeroBehavior = (event) => {
   if (value == '0' || value === '-0' || hasOldData) {
     return
   } else {
-    display.content(event.target.textContent);
+    display.content(event.target.dataset.value);
   }
 }
 
@@ -228,9 +227,9 @@ const decimalBehavior = (event) => {
     if (display.getCurrentDisplay() === '' || hasOldData) {
       display.resetDisplay();
       hasOldData = false;
-      display.content('0' + event.target.textContent);
+      display.content('0' + event.target.dataset.value);
     } else {
-      display.content(event.target.textContent);
+      display.content(event.target.dataset.value);
     }
   }
 }
@@ -241,7 +240,7 @@ const operatorBehavior = (event) => {
   }
   if (!wasOperatorEntered) {
     inputArray[0] = display.getCurrentDisplay();
-    inputArray[1] = event.target.textContent;
+    inputArray[1] = event.target.dataset.value;
     wasOperatorEntered = true;
     hasOldData = true;
     hasDecimal = false;
@@ -252,7 +251,7 @@ const operatorBehavior = (event) => {
     display.resetDisplay();
     display.content(tempResult);
     inputArray[0] = tempResult;
-    inputArray[1] = event.target.textContent;
+    inputArray[1] = event.target.dataset.value;
     inputArray[2] = '';
     hasOldData = true;
     hasDecimal = false;
