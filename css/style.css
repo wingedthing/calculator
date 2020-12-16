@@ -189,6 +189,10 @@ button:focus {
   background-color: tomato;
 }
 
+.zero:hover {
+  background-color: tomato;
+}
+
 .top:hover {
   background-color: tomato;
 }
