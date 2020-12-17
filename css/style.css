@@ -84,6 +84,12 @@ main {
   border: grey solid 3px;
 }
 
+@media only screen and (max-width: 900px){
+  .calculator-wrapper {
+    margin: 0 25% 0 25%;
+  }
+}
+
 @media only screen and (max-width: 660px){
   .calculator-wrapper {
     margin: 0 20% 0 20%;
@@ -188,8 +194,16 @@ button {
   min-width: 0;
 }
 
+.operator {
+  background-color: rgb(138, 218, 131);
+}
+
 .negative {
   font-size: 1.9em;
+}
+
+.equals {
+  background-color: rgb(236, 223, 105);
 }
 
 button:focus {
@@ -198,12 +212,12 @@ button:focus {
 }
 
 .operator:hover {
-  background-color: gold;
+  background-color: rgb(255, 123, 0);
   transform: scale(1.01);
 }
 
 .operator:focus {
-  background-color: gold;
+  background-color:rgb(255, 123, 0);
 }
 
 .number:hover {
@@ -223,7 +237,7 @@ button:focus {
 }
 
 .equals:hover {
-  background-color:rgb(100, 206, 100);
+  background-color:rgb(206, 100, 100);
 }
 
 footer {
