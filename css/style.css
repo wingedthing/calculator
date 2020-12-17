@@ -99,6 +99,15 @@ main {
   }
 }
 
+@media only screen and (max-height: 500px){
+  button {
+    font-size: 1.3em !important;
+  }
+  .calculator-wrapper {
+    height: 65vh;
+  }
+}
+
 .display-container {
   grid-area: display;
   display: grid;
@@ -175,6 +184,8 @@ button {
   font-weight: 400;
   color: rgb(25, 68, 107, 0.85);
   background-color: skyblue;
+  overflow: hidden;
+  min-width: 0;
 }
 
 .negative {
